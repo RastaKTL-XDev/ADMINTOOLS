@@ -5,6 +5,7 @@ const backdropFilter = document.querySelector(".backdrop-filter");
 const logo = document.querySelector(".logo")
 const logoImgLg = document.querySelector(".logo .lg-logo")
 const logoImgSm = document.querySelector(".logo .sm-logo")
+
 var barXValues = ["Growth", "Profit", "Sales", "Loss"];
 var barYValues = [160000, 140890, 129790, 50000];
 var barColors = [
@@ -13,6 +14,7 @@ var barColors = [
   "rgb(227, 84, 212)",
   "#fa0828",
 ];
+
 new Chart("barChart", {
   type: "bar",
   data: {
@@ -32,6 +34,7 @@ new Chart("barChart", {
     },
   },
 });
+
 var douXValues = ["Delivered", "Canceled", "Pending", "Returned"];
 var douYValues = [1754, 656, 889, 480];
 var douColors = [
@@ -40,6 +43,7 @@ var douColors = [
   "rgb(255, 93, 159)",
   "rgb(255, 142, 111)",
 ];
+
 new Chart("douChart", {
   type: "doughnut",
   data: {
@@ -58,6 +62,7 @@ new Chart("douChart", {
     },
   },
 });
+
 // TOGGLE ITEMS FUNCTION
 const toggleItems = () => {
   logo.classList.toggle("activeLogo")
@@ -67,7 +72,8 @@ const toggleItems = () => {
   mainContainer.classList.toggle("active");
   backdropFilter.classList.toggle("active");
 };
+
 // TOGGLE MENU EVENT CLICK
 toggleMenu.addEventListener("click", toggleItems);
 // BACKDROP FILTER EVENT CLICK
-backdropFilter.addEventListener("click", toggleItems);Copied
+backdropFilter.addEventListener("click", toggleItems);
